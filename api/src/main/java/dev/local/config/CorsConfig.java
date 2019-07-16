@@ -9,12 +9,15 @@ import org.springframework.web.filter.CorsFilter;
 
 /**
  * 配置 CORS 跨域访问
+ *
+ * @version 0.1
  */
 @Configuration
 public class CorsConfig {
 
     @Bean
     public FilterRegistrationBean corsFilter() {
+        // 测试github webhook
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
