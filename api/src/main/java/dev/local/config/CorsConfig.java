@@ -25,6 +25,7 @@ public class CorsConfig {
         config.addAllowedOrigin("https://www.getpostman.com");
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
+        config.setMaxAge(Long.MAX_VALUE);
         source.registerCorsConfiguration("/**", config);
         FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
         bean.setOrder(0);
